@@ -1,0 +1,79 @@
+*{
+    font-family: 'PT Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    float: left; /*цей рядок не треба*/
+}
+header {
+    width: 100%;
+    height: 210px;
+    background-color: #dcdcdc;
+    display: flex;
+}
+.bold-text {
+    font-weight: bold;
+}
+.normal-text{
+    font-weight: normal;
+}
+.text-dotted {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px; /* Встановлює товщину пунктирної лінії */
+    text-decoration-skip-ink: none; /* Забороняє врізатися в літери */
+    text-underline-offset: 3px; /* Зміщення пунктирної лінії від тексту */
+}
+.img-small {
+    max-width: 100px;
+    max-height: 100px;
+    padding-left: 190px;
+    margin-top: 56px;
+}
+.direction {
+    flex-direction: row;
+    display: flex;
+}
+.flex-container {
+    flex-direction: column;
+    display: flex;
+}
+h1 {
+    letter-spacing: 1px;
+    line-height: 25px;
+    width: 11%;
+    padding-top: 50px;
+    left: 350px;
+    color: #777777;
+}
+h2 {
+    letter-spacing: 1px;
+    line-height: 45px;
+    width: 30%;
+    left: 300px;
+    color: #777777;
+}
+h3 {
+    letter-spacing: 0;
+    line-height: 25px;
+    width: 30%;
+    font-size: 24px;
+    padding-left: 434px;
+    margin-top: 50px;
+    font-family: "Open Sans", sans-serif ;
+    color: #777777;
+}
+h4 {
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-size: 18px;
+    width: 27%;
+    padding-left: 491px;
+    padding-top: -38px;
+    color: #777777;
+}
+@media screen and (max-width: 900px) {
+    h1, h2, h3, h4 {
+        flex-direction: column;
+    }
+}
