@@ -7,7 +7,7 @@
 header {
     display: flex;
     width: 100%;
-    height: 210px;
+    height: 260px;
     background-color: #dcdcdc;
 }
 .container {
@@ -15,8 +15,8 @@ header {
     justify-content: space-between;
     flex-direction: row;
     max-width: 980px;
-    padding: 0px 10px;
-    margin: 0px auto;
+    padding: 0 10px;
+    margin: 0 auto;
 }
 .bold-text {
     font-weight: bold;
@@ -81,9 +81,9 @@ header {
     display: flex;
     color: #777777;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-right: 10px; /* Додано відступ зправа для створення простору між блоками */
-    margin-left: 230px; /* Додано відступ зліва для створення простору між блоками */
+    margin-left: 190px; /* Додано відступ зліва для створення простору між блоками */
 }
 .li-num {
     display: flex;
@@ -94,13 +94,13 @@ header {
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
     line-height: 40px;
-    font-size: 32px;
+    font-size: 36px;
 }
 
 .li-connection {
     display: flex;
     justify-content: center;
-    margin-left: 70px;
+    margin-left: 99px;
     font-family: 'PT Sans', sans-serif;
     letter-spacing: 1px;
     line-height: 30px;
@@ -110,25 +110,27 @@ header {
 @media (max-width: 1200px) {
     .logo,
     .header,
-    .flex-container1,
-    .flex-container2,
-    .h1-container,
-    .h2-container,
-    .h3-container,
-    .h4-container {
+    .container,
+    .container__1,
+    .container__2,
+    .li-num,
+    .li-connection,
+    .p-container
+     {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
-    /* Додаткові стилі для адаптації елементів під різні типи екранів */
-    .container {
-        max-width: 100%;
-    }
-
     .container__1 {
-        margin-right: 10px;
+        margin-right: auto;
+        margin-left: 17px;
     }
 
     .container__2 {
-        margin-left: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 10px;
     }
+
 }
+
