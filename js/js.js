@@ -16,3 +16,21 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+/*------------HIDDEN MENU----------------*/
+// Отримуємо посилання на елементи списку та підменю
+const pobutovaTech = document.getElementById('for-tech');
+const hiddenMenu = document.querySelector('.hidden-menu');
+
+// Додаємо події наведення курсора та відведення курсора
+pobutovaTech.addEventListener('mouseover', showHiddenMenu);
+pobutovaTech.addEventListener('mouseout', hideHiddenMenu);
+
+// Функція для відображення прихованого підменю
+function showHiddenMenu() {
+    hiddenMenu.classList.add('visible');
+}
+
+// Функція для приховування прихованого підменю
+function hideHiddenMenu() {
+    hiddenMenu.classList.remove('visible');
+}

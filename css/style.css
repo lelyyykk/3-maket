@@ -5,6 +5,11 @@
     border: 0;
     font-family: 'PT Sans', sans-serif;
 }
+.for-all{
+    max-width: 980px;
+    padding: 0 10px;
+    margin: auto;
+}
 
 /*/------------------HEADER-------------------/*/
 
@@ -117,7 +122,7 @@ header {
     line-height: 30px;
     font-size: 18px;
 }
-
+/*----------------мудіа запитдля header-----------------*/
 @media (max-width: 1000px) {
     .logo,
     .header,
@@ -204,12 +209,13 @@ header {
 .list__first {
     border-left: none;
 }
+
+/*-------------------медіа запит для меню---------------*/
 @media screen and (max-width: 1000px) {
     .primary-nuv {
         flex-direction: column;
         align-items: center;
     }
-
     .menu {
         display: none;
         position: fixed;
@@ -321,4 +327,239 @@ header {
 /* Лента слайдов */
 .slick-track{
     display: flex;
+}
+/*----------------CONTENT каталог(меню)----------------*/
+.section .content {}
+.nav-for-content {}
+.nav-list li {
+    display: inline;
+    margin: 5px;
+}
+.nav-list-main, .nav-list {
+    margin-left: -280px;
+}
+.nav-list{
+    display: flex;
+    margin-top: 25px;
+}
+.box-about-things li a{
+    text-decoration: none;
+    color: #767676;
+    font-weight: 590;
+    font-size: 30px;
+}
+.box-about-things {
+    padding-left: 110px;
+}
+.section{
+    display: flex;
+    flex-direction: row;
+}
+.nav-list li a{
+    font-size: 25px;
+}
+.nav-for-main{
+    margin-top: 10px;
+    list-style: none;
+}
+.nav-for-main ul {
+    list-style-type: none;
+}
+.hidden-menu li {
+    list-style-type: disc;
+    font-size: 15px;
+}
+.hidden-menu li a {
+    font-size: 25px;
+}
+.hidden-menu {
+    margin-top: 10px;
+    margin-left: 25px;
+    font-size: 20px;
+}
+.nav-list-main li{
+    margin-bottom: 10px;
+}
+.hidden-menu{
+    display: none;
+}
+.hidden-menu.visible {
+    display: block;
+}
+.box-about-things li a:active {
+    text-decoration: underline;
+}
+.hidden-menu li a:active {
+    text-decoration: underline;
+    color: #000;
+}
+/*----------------CONTENT price list---------------*/
+.price-list-img {
+    margin-left: -120px;
+    margin-top: 110px;
+}
+.price-list{
+    margin-left: -140px;
+    font-size: 28px;
+    color: #444444;
+    font-weight: bold;
+}
+.about-price-list {
+    display: flex;
+}
+/*----------------CONTENT з різними фото---------------------*/
+.box{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 200px;
+
+}
+.one-of-box {
+    background-color: #dcdcdc;
+    height: 450px;
+    width: 260px;
+    margin: 10px;
+
+}
+.for-p{
+    padding: 30px;
+    color: #767676;
+    /*
+    font-weight: ;
+    */
+    font-size: 20px;
+    margin-top: 110px;
+}
+.img-camera {
+    width: 20%;
+    height: 20%;
+    padding-left: 25px;
+    margin-top: 50px;
+   /* padding: 25px;*/
+}
+.for-hrn{
+    display: flex;
+    /*
+    flex-direction: row;
+    */
+    padding-left: 20px;
+    margin-top: 30px;
+    color: #444444;
+    font-weight: bold;
+    font-size: 25px;
+    width:110px;
+}
+.img-basket{
+    display: flex;
+    float: right;
+    margin-right: 35px;
+    margin-top: -25px;
+}
+/*-----------for pages------------*/
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 115px;
+    border-bottom: 1px solid #444444;
+}
+.pagination a {
+    text-decoration: none;
+    color: #444444;
+    font-weight: bold;
+    margin: 15px;
+    font-size: 25px;
+}
+.pagination a span {
+    font-size: 16px;
+    color: #444444;
+}
+
+.pagination a:hover span {
+    font-size: 29px;
+    color: #000000;
+}
+
+.pagination a:active span {
+    font-size: 30px;
+    color: #000000;
+}
+/*-----------------ABOUT COMPANY-------------------*/
+.about-company {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.about-company div {
+    display: flex;
+    margin: 20px;
+}
+.about-company div p {
+    flex: 1;
+    color: #444444;
+}
+/*-------------------медіа запит для контенту-------------*/
+
+@media screen and (max-width: 860px) {
+    .about-company {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-list {
+        font-size: 14px;
+        margin-left: -15px;
+    }
+    .box {
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 100px;
+        margin-left: 20px;
+    }
+    .nav-list-main {
+        margin-left: 5px;
+    }
+    .price-list-img {
+        margin-left: 25px;
+    }
+    .price-list {
+        margin-left: 5px;
+    }
+    .pagination a span {
+        font-size: 30px;
+    }
+    .about-company div p {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 1400px){
+
+    .nav-list {
+        font-size: 14px;
+        margin-left: 5px;
+
+    }
+    .box {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+    .nav-list-main {
+        margin-left: 5px;
+    }
+    .price-list-img {
+        margin-left: 25px;
+    }
+    .price-list {
+        margin-left: 5px;
+
+    }
+    .pagination a span {
+        font-size: 30px;
+    }
+    .about-company div p {
+        font-size: 30px;
+    }
 }
