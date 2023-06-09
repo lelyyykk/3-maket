@@ -18,19 +18,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 /*------------HIDDEN MENU----------------*/
 // Отримуємо посилання на елементи списку та підменю
-const pobutovaTech = document.getElementById('for-tech');
-const hiddenMenu = document.querySelector('.hidden-menu');
+const forTechItems = document.querySelectorAll('.for-tech');
 
-// Додаємо події наведення курсора та відведення курсора
-pobutovaTech.addEventListener('mouseover', showHiddenMenu);
-pobutovaTech.addEventListener('mouseout', hideHiddenMenu);
+// Проходимося по кожному елементу з класом .for-tech
+for (let i = 0; i < forTechItems.length; i++) {
+    const forTechItem = forTechItems[i];
+    const hiddenMenu = forTechItem.querySelector('.hidden-menu');
 
-// Функція для відображення прихованого підменю
-function showHiddenMenu() {
-    hiddenMenu.classList.add('visible');
-}
+    // Додаємо події наведення курсора та відведення курсора для поточного елементу
+    forTechItem.addEventListener('mouseover', showHiddenMenu);
+    forTechItem.addEventListener('mouseout', hideHiddenMenu);
 
-// Функція для приховування прихованого підменю
-function hideHiddenMenu() {
-    hiddenMenu.classList.remove('visible');
+    // Функція для відображення прихованого підменю
+    function showHiddenMenu() {
+        hiddenMenu.classList.add('visible');
+    }
+
+    // Функція для приховування прихованого підменю
+    function hideHiddenMenu() {
+        hiddenMenu.classList.remove('visible');
+    }
 }
