@@ -39,3 +39,78 @@ for (let i = 0; i < forTechItems.length; i++) {
         hiddenMenu.classList.remove('visible');
     }
 }
+/*----------------для форми-----------------*/
+$(document).ready(function() {
+    // Show the form
+    $('.li-connection').click(function() {
+        $('.feedback-hidden-menu').addClass('visible');
+    });
+
+    // Close the form
+    $('.feedback-hidden-menu .sent').click(function() {
+        $('.feedback-hidden-menu').removeClass('visible');
+    });
+
+    // Close the form when clicked outside
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.li-connection').length && !$(event.target).closest('.feedback-hidden-menu').length) {
+            $('.feedback-hidden-menu').removeClass('visible');
+        }
+    });
+
+    // Close the form when close button is clicked
+    $('.feedback-hidden-menu .close-button').click(function() {
+        $('.feedback-hidden-menu').removeClass('visible');
+        return false;
+    });
+});
+/*---------------валідація-------------------*/
+$(document).click(function(event) {
+    if (!$(event.target).closest('.li-connection').length && !$(event.target).closest('.feedback-hidden-menu').length) {
+        $('.feedback-hidden-menu').removeClass('visible');
+    }
+});
+
+$(".feedback-hidden-menu form").submit(function(event) {
+    var form = $(this);
+    var inputs = form.find("input[type='text'], input[type='tel'], input[type='gmail'], textarea");
+
+    inputs.each(function() {
+        var input = $(this);
+        var errorContainer = input.siblings(".error-message");
+        var errorMessage = input.data("error");
+        var fieldType = input.attr("type");
+
+        if (input.val().trim() === "") {
+            input.val("");
+            input.attr("placeholder", errorMessage);
+            input.addClass("error");
+        } else {
+            if (fieldType === "text" && !/^[a-zA-Zа-яА-ЯіїєІЇЄґҐ']{2,}$/.test(input.val())) {
+                input.val("");
+                input.attr("placeholder", "Введіть коректно ім'я.");
+                input.addClass("error");
+            } else if (fieldType === "tel" && !/^[\d-()+ ]{10,}$/.test(input.val())) {
+                input.val("");
+                input.attr("placeholder", "Введіть коректний номер телефону.");
+                input.addClass("error");
+            }
+                else if (fieldType === "email" && (!/^.{15,}$/.test(input.val()) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.val()))) {
+                input.val("");
+                input.attr("placeholder", "Введіть коректну адресу електронної пошти.");
+                input.addClass("error");
+            } else if (input.is("textarea[name='message']") && input.val().length < 10) {
+                input.val("");
+                input.attr("placeholder", "Введіть повідомлення (мінімум 10 символів).");
+                input.addClass("error");
+            }
+                else {
+                input.removeClass("error");
+            }
+        }
+    });
+
+    if (form.find(".error").length > 0) {
+        event.preventDefault();
+    }
+});

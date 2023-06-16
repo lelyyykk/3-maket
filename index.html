@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>lelyk</title>
@@ -35,8 +35,25 @@
                                 <a href="#" title="phone">+(380)95-573-21-36</a>
                             </li>
                             <li class="li-connection">
-                                <a href="#" title="Зворотній зв'язок">Зворотній зв'язок</a>
+                                <a href="#" title="Зворотній зв'язок" class="connection">Зворотній зв'язок</a>
+                                <div class="feedback-hidden-menu">
+                                    <button class="close-button">&#10005;</button>
+                                    <p class="feedback_a">Зворотній зв'язок</p>
+                                    <form action="#" method="get" enctype="multipart/form-data">
+                                        <label class="info_a">Ваше ім'я</label>
+                                            <input type="text" name="name" data-error="Будь ласка, введіть коректне ім'я." required/>
+                                        <label class="info_a">Телефон</label>
+                                            <input type="tel" name="phone" data-error="Будь ласка, введіть коректний номер телефону." required/>
+                                        <label class="info_a">Gmail</label>
+                                            <input type="email" name="gmail" data-error="Будь ласка, введіть коректну адресу електронної пошти." required/>
+                                        <label class="info_a">Повідомлення</label>
+                                            <textarea name="message" cols="30" rows="10" data-error="Будь ласка, введіть повідомлення." required></textarea>
+                                        <button type="submit" class="submit">Відправити</button>
+                                    </form>
+                                </div>
                             </li>
+
+
                         </ul>
                     </div>
                 </div>
