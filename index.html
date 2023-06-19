@@ -2,8 +2,9 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>lelyk</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,279 +17,242 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
-    <body>
-        <header>
-                <div class="container">
-                     <div class="direction__1">
-                        <img class="logo" src="img/emblem.png" alt="<logo"/>
-                        <div class="container__1">
-                            <h1 class="bold-text h1-container">Назва компанії</h1>
-                            <p class="p-container normal-text">найкраща компанія</p>
-                        </div>
-                    </div>
-                    <div class="container__2">
-                        <ul>
-                            <li class="li-num">
-                                <a href="#" title="phone">+(380)95-573-21-36</a>
-                            </li>
-                            <li class="li-num">
-                                <a href="#" title="phone">+(380)95-573-21-36</a>
-                            </li>
-                            <li class="li-connection">
-                                <a href="#" title="Зворотній зв'язок" class="connection">Зворотній зв'язок</a>
-                                <div class="feedback-hidden-menu">
-                                    <button class="close-button">&#10005;</button>
-                                    <p class="feedback_a">Зворотній зв'язок</p>
-                                    <form action="#" method="get" enctype="multipart/form-data">
-                                        <label class="info_a">Ваше ім'я</label>
-                                            <input type="text" name="name" data-error="Будь ласка, введіть коректне ім'я." required/>
-                                        <label class="info_a">Телефон</label>
-                                            <input type="tel" name="phone" data-error="Будь ласка, введіть коректний номер телефону." required/>
-                                        <label class="info_a">Gmail</label>
-                                            <input type="email" name="gmail" data-error="Будь ласка, введіть коректну адресу електронної пошти." required/>
-                                        <label class="info_a">Повідомлення</label>
-                                            <textarea name="message" cols="30" rows="10" data-error="Будь ласка, введіть повідомлення." required></textarea>
-                                        <button type="submit" class="submit">Відправити</button>
-                                    </form>
-                                </div>
-                            </li>
-
-
-                        </ul>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="left__container">
+                <div class="logo">
+                    <a href="#"><img src="img/logo.png" alt="logo"></a>
+                    <div class="box">
+                        <h1>Назва компанії</h1>
+                        <p>найкраща компанія</p>
                     </div>
                 </div>
+            </div>
+            <div class="right__container">
+                <ul class="box" id="phone">
+                    <li><a href="#" title="phone">+(380)95-573-21-36</a></li>
+                    <li><a href="#" title="phone">+(380)95-573-21-36</a></li>
+                    <li class="connection">
+                        <a href="#" title="Зворотній зв'язок" class="feedback">Зворотній зв'язок</a>
+                        <div class="feedback-hidden-menu">
+                            <button class="close-button">&#10005;</button>
+                            <p class="feedback_a">ЗВОРОТНІЙ ЗВ'ЯЗОК</p>
+                            <form action="#" method="get" enctype="multipart/form-data">
+                                <label class="info_a">Ваше ім'я</label>
+                                <input type="text" name="name" title="Введіть коректне ім'я" required/>
+
+                                <label class="info_a">Телефон</label>
+                                <input type="tel" name="phone" title="Введіть коректний номер телефону" required/>
+
+                                <label class="info_a">Gmail</label>
+                                <input type="email" name="email" title="Введіть коректну адресу електронної пошти" required/>
+
+                                <label class="info_a">Повідомлення</label>
+                                <textarea name="message" cols="30" rows="10" minlength="10" title="Введіть повідомлення (мінімум 10 символів)" required></textarea>
+
+                                <button type="submit" class="submit">Відправити</button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </header>
-            <main>
-                    <section class="primary-nuv">
-                            <button class="burger-menu">
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                            </button>
-                                <nav class="menu">
-                                    <ul class="menu__list">
-                                        <li class="list__first">
-                                            <a href="#" title="Головна"><span>Головна</span></a>
-                                        </li>
-                                        <li class="list">
-                                            <a href="#" title="Каталог"><span>Каталог</span></a>
-                                        </li>
-                                        <li class="list">
-                                            <a href="#" title="Доставка та оплата"><span>Доставка та оплата</span></a>
-                                        </li>
-                                        <li class="list">
-                                            <a href="#"  title="Прайс-лист"><span>Прайс-лист</span></a>
-                                        </li>
-                                        <li class="list">
-                                            <a href="#"  title="Контакти"><span>Контакти</span></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                    </section>
-                <div class="slider">
-                        <div class="slider__item">
-                            <img src="img/slider.png" alt="slider">
-                        </div>
-                        <div class="slider__item">
-                            <img src="img/slider_2.png" alt="slider">
-                        </div>
+        <main class="page">
+            <section class="primary_nav">
+                <button class="burger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                    <nav class="menu">
+                        <ul class="menu__container">
+                            <li><a href="#catalog" title="Головна"><span>Головна</span></a></li>
+                            <li><a href="#catalog" title="Каталог"><span>Каталог</span></a></li>
+                            <li><a href="#catalog" title="Доставка і оплата"><span>Доставка і оплата</span></a></li>
+                            <li><a href="#catalog" title="Прайс-лист"><span>Прайс-лист</span></a></li>
+                            <li><a href="#phone" title="Контакти"><span>Контакти</span></a></li>
+                        </ul>
+                    </nav>
+            </section>
+            <section class="slider">
+                <div class="slider__item">
+                    <img src="img/slider_1.png" alt="slider">
                 </div>
-                <section class="all-content">
-                    <section class="content for-all">
-                        <div class="box-about-things">
-                            <nav class="nav-for-content">
-                                <ul class="nav-list">
-                                    <li>
-                                        <a href="#" title="Головна">Головна /</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Каталог">Каталог /</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Побутова техніка">Побутова техніка</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </section>
-                    <section class="section for-all">
-                        <div class="box-about-things">
-                            <nav class="nav-for-main">
-                                <ul class="nav-list-main">
-                                    <li class="for-tech">
-                                        <a href="#" title="Автомобілі">Автомобілі</a>
-                                        <ul class="hidden-menu">
-                                            <li><a href="#" title="Легкові">Легкові</a></li>
-                                            <li><a href="#" title="Вантажівки">Вантажівки</a></li>
-                                            <li><a href="#" title="Автобуси">Автобуси</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="for-tech">
-                                        <a href="#" title="Побутова техніка">Побутова техніка</a>
+                <div class="slider__item">
+                    <img src="img/slider_2.png" alt="slider">
+                </div>
+            </section>
+            <section class="nav__container">
+                <nav class="nav_list">
+                    <ul class="list" id="catalog">
+                        <li><a href="#" title="Головна">Головна /</a></li>
+                        <li><a href="#" title="Каталог">Каталог /</a></li>
+                        <li><a href="#" title="Побутова техніка">Побутова техніка</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="content__container">
+                <section class="content__container_top">
+                        <section class="catalog__container">
+                            <div class="catalog__container_items">
+                                <nav class="nav_items">
+                                    <ul class="nav_list_items">
+                                        <li class="items">
+                                            <a href="#" title="Автомобілі">Автомобілі</a>
+                                            <ul class="hidden-menu">
+                                                <li><a href="#" title="Легкові">Легкові</a></li>
+                                                <li><a href="#" title="Вантажівки">Вантажівки</a></li>
+                                                <li><a href="#" title="Автобуси">Автобуси</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="items">
+                                            <a href="#" title="Побутова техніка">Побутова техніка</a>
                                             <ul class="hidden-menu">
                                                 <li><a href="#" title="Мікрохвильовки">Мікрохвильовки</a></li>
                                                 <li><a href="#" title="Холодильники">Холодильники</a></li>
                                                 <li><a href="#" title="Посудомийні машини">Посудомийні машини</a></li>
                                                 <li><a href="#" title="Чайники">Чайники</a></li>
                                             </ul>
-                                    </li>
-                                    <li class="for-tech">
-                                        <a href="#" title="Мобільна техніка">Мобільна техніка</a>
-                                        <ul class="hidden-menu">
-                                            <li><a href="#" title="Смартфони">Смартфони</a></li>
-                                            <li><a href="#" title="Планшети">Планшети</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="for-tech">
-                                        <a href="#" title="Комп'ютери">Комп'ютери</a>
-                                        <ul class="hidden-menu">
-                                            <li><a href="#" title="Ігрові комп'ютери">Ігрові комп'ютери</a></li>
-                                            <li><a href="#" title="Ноутбуки">Ноутбуки</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="for-tech">
-                                        <a href="#" title="Одежа">Одежа</a>
-                                        <ul class="hidden-menu">
-                                            <li><a href="#" title="Чоловіча одежа">Чоловіча одежа</a></li>
-                                            <li><a href="#" title="Жіноча одежа">Жіноча одежа</a></li>
-                                            <li><a href="#" title="Одежа для дітей">Одежа для дітей</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="for-tech">
-                                        <a href="#" title="Нерухомість">Нерухомість</a>
-                                        <ul class="hidden-menu">
-                                            <li><a href="#" title="Квартири">Квартири</a></li>
-                                            <li><a href="#" title="Будинки">Будинки</a></li>
-                                            <li><a href="#" title="Вілли">Вілли</a></li>
-                                            <li><a href="#" title="Котеджі">Котеджі</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </nav>
-                                <div class="price-list-img">
-                                    <img src="img/price.png" alt="price">
-                                </div>
-                                <div class="price-list">
-                                    <p>Прайс-лист</p>
-                                </div>
+                                        </li>
+                                        <li class="items">
+                                            <a href="#" title="Мобільна техніка">Мобільна техніка</a>
+                                            <ul class="hidden-menu">
+                                                <li><a href="#" title="Смартфони">Смартфони</a></li>
+                                                <li><a href="#" title="Планшети">Планшети</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="items">
+                                            <a href="#" title="Комп'ютери">Комп'ютери</a>
+                                            <ul class="hidden-menu">
+                                                <li><a href="#" title="Ігрові комп'ютери">Ігрові комп'ютери</a></li>
+                                                <li><a href="#" title="Ноутбуки">Ноутбуки</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="items">
+                                            <a href="#" title="Одежа">Одежа</a>
+                                            <ul class="hidden-menu">
+                                                <li><a href="#" title="Чоловіча одежа">Чоловіча одежа</a></li>
+                                                <li><a href="#" title="Жіноча одежа">Жіноча одежа</a></li>
+                                                <li><a href="#" title="Одежа для дітей">Одежа для дітей</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="items">
+                                            <a href="#" title="Нерухомість">Нерухомість</a>
+                                            <ul class="hidden-menu">
+                                                <li><a href="#" title="Квартири">Квартири</a></li>
+                                                <li><a href="#" title="Будинки">Будинки</a></li>
+                                                <li><a href="#" title="Вілли">Вілли</a></li>
+                                                <li><a href="#" title="Котеджі">Котеджі</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
-                            <div class="box">
-                                <div class="one-of-box">
-                                    <div class="img-camera">
-                                        <img src="img/camera.png" alt="camera">
-                                    </div>
-                                    <div class="for-p">
-                                        <p>Найкращий чайник, який потрібно купити!</p>
-                                    </div>
-                                    <div class="for-hrn">
-                                        <p>1000 грн.</p>
-                                    </div>
-                                    <div class="img-basket">
-                                        <img src="img/basket.png" alt="basket">
-                                    </div>
-                                </div>
-                                <div class="one-of-box">
-                                    <div class="img-camera">
-                                        <img src="img/camera.png" alt="camera">
-                                    </div>
-                                    <div class="for-p">
-                                        <p>Найкращий чайник, який потрібно купити!</p>
-                                    </div>
-                                    <div class="for-hrn">
-                                        <p>1000 грн.</p>
-                                    </div>
-                                    <div class="img-basket">
-                                        <img src="img/basket.png" alt="basket">
-                                    </div>
-                                </div>
-                                <div class="one-of-box">
-                                    <div class="img-camera">
-                                        <img src="img/camera.png" alt="camera">
-                                    </div>
-                                    <div class="for-p">
-                                        <p>Найкращий чайник, який потрібно купити!</p>
-                                    </div>
-                                    <div class="for-hrn">
-                                        <p>1000 грн.</p>
-                                    </div>
-                                    <div class="img-basket">
-                                        <img src="img/basket.png" alt="basket">
-                                    </div>
-                                </div>
-                                <div class="one-of-box">
-                                    <div class="img-camera">
-                                        <img src="img/camera.png" alt="camera">
-                                    </div>
-                                    <div class="for-p">
-                                        <p>Найкращий чайник, який потрібно купити!</p>
-                                    </div>
-                                    <div class="for-hrn">
-                                        <p>1000 грн.</p>
-                                    </div>
-                                    <div class="img-basket">
-                                        <img src="img/basket.png" alt="basket">
-                                    </div>
-                                </div>
-                                <div class="one-of-box">
-                                    <div class="img-camera">
-                                        <img src="img/camera.png" alt="camera">
-                                    </div>
-                                    <div class="for-p">
-                                        <p>Найкращий чайник, який потрібно купити!</p>
-                                    </div>
-                                    <div class="for-hrn">
-                                        <p>1 000 грн.</p>
-                                    </div>
-                                    <div class="img-basket">
-                                        <img src="img/basket.png" alt="basket">
-                                    </div>
-                                </div>
+                            <div class="price__container">
+                                <img src="img/price.png" alt="price">
+                                <p>Прайс-лист</p>
                             </div>
+                        </section>
+                    <section class="box__container">
+                        <div class="one-of-box">
+                            <div class="img-camera">
+                                <img src="img/camera.png" alt="camera">
+                            </div>
+                            <div class="for-text">
+                                <p>Найкращий чайник, який потрібно купити!</p>
+                            </div>
+                            <div class="for-money">
+                                <p>1000 грн.</p>
+                                <a href="#"><img src="img/basket.png" alt="basket"></a>
+                            </div>
+                        </div>
+                        <div class="one-of-box">
+                            <div class="img-camera">
+                                <img src="img/camera.png" alt="camera">
+                            </div>
+                            <div class="for-text">
+                                <p>Найкращий чайник, який потрібно купити!</p>
+                            </div>
+                            <div class="for-money">
+                                <p>1000 грн.</p>
+                                <a href="#"><img src="img/basket.png" alt="basket"></a>
+                            </div>
+                        </div>
+                        <div class="one-of-box">
+                            <div class="img-camera">
+                                <img src="img/camera.png" alt="camera">
+                            </div>
+                            <div class="for-text">
+                                <p>Найкращий чайник, який потрібно купити!</p>
+                            </div>
+                            <div class="for-money">
+                                <p>1000 грн.</p>
+                                <a href="#"><img src="img/basket.png" alt="basket"></a>
+                            </div>
+                        </div>
+                        <div class="one-of-box">
+                            <div class="img-camera">
+                                <img src="img/camera.png" alt="camera">
+                            </div>
+                            <div class="for-text">
+                                <p>Найкращий чайник, який потрібно купити!</p>
+                            </div>
+                            <div class="for-money">
+                                <p>1000 грн.</p>
+                                <a href="#"><img src="img/basket.png" alt="basket"></a>
+                            </div>
+                        </div>
+                        <div class="one-of-box">
+                            <div class="img-camera">
+                                <img src="img/camera.png" alt="camera">
+                            </div>
+                            <div class="for-text">
+                                <p>Найкращий чайник, який потрібно купити!</p>
+                            </div>
+                            <div class="for-money">
+                                <p>1000 грн.</p>
+                                <a href="#"><img src="img/basket.png" alt="basket"></a>
+                            </div>
+                        </div>
                     </section>
-                    <div class="pagination for-all">
+                </section>
+                <section class="content__container_bottom">
+                    <section class="pagination__container">
                         <a href="#" title="1"><span>1</span></a>
                         <a href="#" title="2"><span>2</span></a>
                         <a href="#" title="3"><span>3</span></a>
-                    </div>
-                    <section class="about-company for-all">
-                        <div class="p-1"><p>Компанія "Щастя" існує вже понад 6 років, і за цей період ми мали честь брати участь у розробці понад 700 веб-сайтів. Це дозволило нам вирости у справжніх професіоналів своєї справи. Наш колектив налічує понад 30 талановитих співробітників, які працюють в двох офісах – у прекрасних містах Луцьку та Львові. Ми завжди надаємо особливу увагу тим важливим аспектам, які характерні для цього жанру: нерозділене кохання, дбайливе ставлення до молодості та відтінки, які виразно виражають глибину людської душі.</p></div>
-                        <div class="p-2"><p>Одним з ключових напрямків нашої компанії є пошукове просування веб-сайтів. В даний момент ми співпрацюємо з понад 150 постійними клієнтами, оптимізуючи їх сайти для понад 11 000 пошукових запитів. Наша робота зосереджена на досягненні високої якості проектів, а також використанні власних унікальних розробок у сфері SEO-просування. Відділ SEO налічує 9 спеціалістів під керівництвом провідного експерта, які переважно працюють у нашому Луцькому офісі. Ми завжди стежимо за новими тенденціями та надаємо найкращі рішення для досягнення високих результатів у пошукових системах.</p></div>
+                    </section>
+                    <section class="about_company__container">
+                        <p>Компанія "Щастя" існує вже понад 6 років, і за цей період ми мали честь брати участь у розробці понад 700 веб-сайтів. Це дозволило нам вирости у справжніх професіоналів своєї справи. Наш колектив налічує понад 30 талановитих співробітників, які працюють в двох офісах – у прекрасних містах Луцьку та Львові. Ми завжди надаємо особливу увагу тим важливим аспектам, які характерні для цього жанру: нерозділене кохання, дбайливе ставлення до молодості та відтінки, які виразно виражають глибину людської душі.</p>
+                        <p>Одним з ключових напрямків нашої компанії є пошукове просування веб-сайтів. В даний момент ми співпрацюємо з понад 150 постійними клієнтами, оптимізуючи їх сайти для понад 11 000 пошукових запитів. Наша робота зосереджена на досягненні високої якості проектів, а також використанні власних унікальних розробок у сфері SEO-просування. Відділ SEO налічує 9 спеціалістів під керівництвом провідного експерта, які переважно працюють у нашому Луцькому офісі. Ми завжди стежимо за новими тенденціями та надаємо найкращі рішення для досягнення високих результатів у пошукових системах.</p>
                     </section>
                 </section>
-                <footer>
-                    <div class="footer for-all">
-                        <div class="about-vnu">
-                            <p>&copy;2020-2023 ВНУ «Компанія» info@maket.ua</p>
-                        </div>
-                        <nav class="footer-list">
-                            <ul>
-                                <li>
-                                    <a href="#" title="Головна">Головна</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Каталог">Каталог</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Доставка та оплата">Доставка та оплата</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Прайс-лист">Прайс-лист</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Контакти">Контакти</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="development">
-                            <img src="img/company.png" alt="company">
-                            <div><p><u>Розробка сайту</u> - компанія «Щастя»</p></div>
-                        </div>
-                    </div>
-                </footer>
-            </main>
-        <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/js.js"></script>
-    </body>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="information__container">
+                <div class="for-p">
+                    <p>&copy;2020-2023 ВНУ «Компанія» info@maket.ua</p>
+                </div>
+                <nav class="footer-list">
+                    <ul class="nav-footer">
+                        <li><a href="#catalog" title="Головна">Головна</a></li>
+                        <li><a href="#catalog" title="Каталог">Каталог</a></li>
+                        <li><a href="#catalog" title="Доставка та оплата">Доставка та оплата</a></li>
+                        <li><a href="#catalog" title="Прайс-лист">Прайс-лист</a></li>
+                        <li><a href="#phone" title="Контакти">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="development">
+                    <img src="img/company.png" alt="company">
+                    <p><u>Розробка сайту</u> - компанія «Щастя»</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js.js"></script>
+</body>
 </html>
