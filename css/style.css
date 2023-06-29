@@ -47,6 +47,7 @@ input {
 button {
     /*cursor: pointer;
     background-color: inherit;*/
+    border: none;
 }
 .wrapper {
     min-height: 100%;
@@ -60,7 +61,12 @@ button {
   Condition
   ========================================
 */
-[class ="__container"] {
+/*[class =__container] {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}*/
+.container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 10px;
@@ -94,23 +100,26 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 0.8;
+    justify-content: center;
 
 }
 .logo img {
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 273px;
+    max-height: 100px;
     margin: 15px;
 
 }
 .logo h1 {
     color: #767676;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     width: 18px;
+    margin: 3px 0;
 }
 .logo p {
     color: #767676;
     font-size: 20px;
+    margin: 15px 0;
 }
 .right__container {
     display: flex;
@@ -131,8 +140,9 @@ body {
      font-weight: bold;
      text-decoration: underline;
      text-decoration-style: dashed;
-     text-decoration-thickness: 7%; /* Встановлює товщину пунктирної лінії */
-     text-underline-offset: 5px; /* Зміщення пунктирної лінії від тексту */
+     text-decoration-thickness: 7%;
+     text-underline-offset: 5px;
+     margin-left: 60px;
 }
 /*
  ========================================
@@ -282,20 +292,20 @@ body {
 .slider .slick-arrow {
     position: absolute;
     top: 50%;
-    z-index: 2;
+    z-index: 10;
     width: 40px;
     height: 90px;
     font-size: 0;
 }
 .slider .slick-arrow.slick-prev {
     left: 0;
-    background: url('../img/left.png') 0 0 / 100% no-repeat;
+    background: url("img/left.png") 0 0 / 100% no-repeat;
     margin: 0 200px;
 }
 
 .slider .slick-arrow.slick-next {
     right: 0;
-    background: url("../img/right.png") 0 0 / 100% no-repeat;
+    background: url("img/right.png") 0 0 / 100% no-repeat;
     margin: 0 200px;
 }
 
@@ -364,7 +374,6 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
 .content__container_top {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 0 200px;
   }
 .content__container_bottom {
     max-width: 780px;
@@ -381,10 +390,10 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 240px;
+    padding-left: 420px;
 }
 .list li {
-    margin: 3px;
+    margin: 6px;
 }
 .list a {
     color: #777777;
@@ -395,8 +404,12 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
 }
 /*------------Container for items------------*/
 .nav_list_items .items {
-    font-size: 24px;
+    font-size: 23px;
     color: #777777;
+}
+.nav_list_items {
+    padding: 0;
+    width: 200px;
 }
 .hidden-menu {
     display: none;
@@ -404,10 +417,18 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
 .hidden-menu li {
     list-style-type: disc;
 }
+.items .hidden-menu.visible li a {
+    font-size: 20px;
+}
 .hidden-menu.visible {
     display: block;
 }
-
+.catalog__container_items li {
+    padding: 10px;
+}
+.nav_items .nav_list_items .items li {
+    padding: 3px;
+}
 .catalog__container_items li a:active {
     border-bottom: 2px solid #000;
 }
@@ -422,13 +443,14 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
 /*--------Price list img---------*/
 .price__container {
     padding-top: 130px;
-    padding-left: 130px;
+    padding-left: 10px;
     text-align: center;
 }
 .price__container p {
     color: #444444;
-    font-size: 25px;
+    font-size: 29px;
     font-weight: bold;
+    margin: 0;
 }
 /*------box with photo------*/
 .box__container{
@@ -476,7 +498,7 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
     justify-content: center;
     align-items: flex-start;
     height: 115px;
-    width: 740px;
+    width: 810px;
     border-bottom: 1px solid #444444;
 }
 .pagination__container a {
@@ -502,13 +524,28 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
 }
 /*-----------------ABOUT COMPANY-------------------*/
 .about_company__container {
-    display: flex;
-    flex: 1;
-    margin: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    color: #444444;
+    width: 739px;
+    margin: 10px;
+    font-family: 'PT Sans', sans-serif;
 
 }
-.about_company__container div p {
-    color: #444444;
+.about_company__container  p {
+    color: #767676;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.box_1 {
+    padding-right: 60px;
+    width: 371px;
+    height: 168px;
+}
+.box_2 {
+    padding-right: 50px;
+    width: 368px;
+    height: 212px;
 }
 /*
   ========================================
@@ -563,6 +600,21 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
     .about_company__container {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    .box_1,
+     .box_2 {
+        padding-right: 0;
+    }
+}
+@media screen and (max-width: 896px) {
+    .pagination__container {
+        width: 557px;
+    }
+}
+@media screen and (max-width: 621px) {
+    .pagination__container {
+        width: 400px;
     }
 }
 @media screen and (max-width:510px){
@@ -570,7 +622,16 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
         font-size: 15px;
     }
 }
-
+@media screen and (max-width: 458px) {
+    .pagination__container {
+        width: 280px;
+        height: 47px;
+    }
+    .about_company__container p {
+        font-size: 12px;
+        width: 300px;
+    }
+}
 /*
   ========================================
   Footer
@@ -583,9 +644,10 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
 }
 .information__container {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 .footer p, .footer a {
     color: #FFFFFF;
@@ -593,7 +655,7 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
 .development {
     display: flex;
     flex-direction: row;
-    margin-right: 200px;
+
 }
 .footer li {
     margin: 10px;
@@ -604,7 +666,9 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
 }
 .for-p {
     width: 190px;
-    margin-left: 200px;
+    padding-top: 25px;
+
+
 }
 .development img {
     width: 36px;
@@ -627,7 +691,7 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
 }
 @media screen and (max-width: 900px) {
     .development {
-        margin-right: 0;
+
 
     }
 }
@@ -655,12 +719,19 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
         justify-content: center;
         margin: 0;
         padding: 0;
+        align-items: center;
+        height: auto;
     }
     .footer-list {
         margin: 0;
     }
     .development p {
+        margin-right: 0;
         padding-bottom: 10px;
+    }
+    .for-p {
+        padding-top: 0;
+        margin: 0;
     }
 }
 
@@ -776,31 +847,17 @@ textarea {
   Validation
   ========================================
 */
-input.error,
-textarea.error {
-    border-color: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-input.error,
-textarea.error {
-    background: radial-gradient(circle, #FFFFFF, #f7dadb);
-    border-color: #91171f;
-    box-shadow: 0 0 5px #91171f;
-}
 
+input.error,
+textarea.error {
+    box-shadow: inset 0 0 10px 0 #91171f;
+    border-color: #91171f;
+}
 input.error::placeholder,
 textarea.error::placeholder {
     color: #91171f;
 }
 
-
-
-/* Додання тіні до полів введення */
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-textarea {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
 /*
   ========================================
   Media for feedback
