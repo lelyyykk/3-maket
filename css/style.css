@@ -383,6 +383,7 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding-bottom: 200px;
 }
 
 /*------------Navigation content----------*/
@@ -628,8 +629,8 @@ button.slick-next.slick-arrow, button.slick-prev.slick-arrow {
         height: 47px;
     }
     .about_company__container p {
-        font-size: 12px;
-        width: 300px;
+
+        
     }
 }
 /*
